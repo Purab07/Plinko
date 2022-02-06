@@ -15,7 +15,6 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
- 
 
 
    for (var k = 0; k <=width; k = k + 80) {
@@ -57,7 +56,7 @@ function setup() {
 function draw() {
   background("black");
   textSize(20)
- //text("Score : "+score,20,30);
+ text("Score : "+score,20,30);
   Engine.update(engine);
  
   
@@ -67,7 +66,7 @@ function draw() {
      
    }
    if(frameCount%60===0){
-     particles.push(new particle(random(width/2-30, width/2+30), 10,10));
+     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
      score++;
    }
  
